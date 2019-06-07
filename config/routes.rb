@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   root 'book#read'
   post 'comics/create'
   get'/login',to: 'sessions#new'
+  delete '/logout', to:'sessions#destroy'
   post'sessions/create'
+
 end

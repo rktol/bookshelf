@@ -14,10 +14,20 @@ class SessionsController < ApplicationController
        render :new
    end
   end
+
+  def destroy
+   session.delete(:user_id)
+   flash[:success] = 'ログアウトしました'
+   redirect_to root_path
+ end
+ 
   private
 
   def session_params
     params.require(:session).permit(:email, :password)
   end
+
+
+
 
 end

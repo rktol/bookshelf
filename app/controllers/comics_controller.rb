@@ -1,4 +1,7 @@
 class ComicsController < ApplicationController
+  
+  before_action :login_required
+
   def new
   end
 
@@ -14,5 +17,14 @@ class ComicsController < ApplicationController
  def comic_params
    params.require(:comic).permit(:title)
  end
- 
+
+ def user_params
+   params.require(:user).permit(:name,:email,:password,:password_confirmation)
+ end
+
+ def login_required
+   redirect_to login_path unless current_user
+ end
+
+
 end
