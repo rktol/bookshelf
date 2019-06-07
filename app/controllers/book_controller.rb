@@ -1,6 +1,6 @@
 class BookController < ApplicationController
   def read
     comics=Comic.all
-    @comicall = comics
+    @randomcomic = comics.sample
   end
 end
