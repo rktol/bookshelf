@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Comic.delete_all
+Comic.create(title:"スラムダンク",author:"井上雄彦")
+Comic.create(title:"DORAGON BALL",author:"鳥山明")
