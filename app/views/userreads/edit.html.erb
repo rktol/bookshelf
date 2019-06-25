@@ -1,0 +1,18 @@
+<h1>Editing Userread</h1>
+
+<%= render 'form', userread: @userread %>
+
+<%= link_to 'Show', @userread %> |
+<%= link_to 'Back', userreads_path %>
+
+<br>
+
+<% @comics.each do |c| %>
+        <%= c.id %>:<%= c.title %>(作者:<%= c.author %>)<br>
+<% end %>
+
+<br>
+
+<% @users.each do |u| %>
+        <%= u.id %>:<%= u.name %><br>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comic_id: 
+  user_id: 
+  vol: 
+
+two:
+  comic_id: 
+  user_id: 
+  vol: 

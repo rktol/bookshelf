@@ -1,0 +1,2 @@
+class Userread < ApplicationRecord
+end

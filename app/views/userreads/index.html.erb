@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Userreads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comic</th>
+      <th>User</th>
+      <th>Vol</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @userreads.each do |userread| %>
+      <tr>
+        <td><%= userread.comic_id %></td>
+        <td><%= userread.user_id %></td>
+        <td><%= userread.vol %></td>
+        <td><%= link_to 'Show', userread %></td>
+        <td><%= link_to 'Edit', edit_userread_path(userread) %></td>
+        <td><%= link_to 'Destroy', userread, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Userread', new_userread_path %>
+
+
+<br>
+
+<% @comics.each do |c| %>
+        <%= c.id %>:<%= c.title %>(作者:<%= c.author %>)<br>
+<% end %>
+
+<br>
+
+<% @users.each do |u| %>
+        <%= u.id %>:<%= u.name %><br>
+<% end %>
