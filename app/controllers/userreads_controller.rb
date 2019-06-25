@@ -12,6 +12,8 @@ class UserreadsController < ApplicationController
   # GET /userreads/1
   # GET /userreads/1.json
   def show
+    @users=User.all
+    @comics=Comic.all
   end
 
   # GET /userreads/new

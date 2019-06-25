@@ -1,7 +1,6 @@
 <% provide(:title, "本棚") %>
 <p id="notice"><%= notice %></p>
 
-
 <table>
   <thead>
     <tr>
@@ -18,9 +17,9 @@
         <td><%= @comics[userread.comic_id-1].title %></td>
         <td><%= @users[userread.user_id-1].name %></td>
         <td><%= userread.vol %></td>
-        <td><%= link_to 'Show', userread %></td>
-        <td><%= link_to 'Edit', edit_userread_path(userread) %></td>
-        <td><%= link_to 'Destroy', userread, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '本の詳細をみる', userread %></td>
+        <td><%= link_to '編集', edit_userread_path(userread) %></td>
+        <td><%= link_to '削除', userread, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

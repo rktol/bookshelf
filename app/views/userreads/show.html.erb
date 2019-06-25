@@ -2,17 +2,16 @@
 
 <p>
   <strong>Comic:</strong>
-  <%= @userread.comic_id %>
+  <%= @comics[@userread.comic_id-1].title %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @userread.user_id %>
+  <%= @users[@userread.user_id-1].name %>
 </p>
 
 <p>
-  <strong>Vol:</strong>
-  <%= @userread.vol %>
+  <strong>第<%= @userread.vol %>巻</strong>
 </p>
 
 <%= link_to '編集', edit_userread_path(@userread) %> |
