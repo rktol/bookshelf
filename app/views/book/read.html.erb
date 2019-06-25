@@ -4,8 +4,12 @@
 <h2>
   <ul>
 <% @comics.each do |c| %>
-        <li><%= c.title %>(作者:<%= c.author %>)</li>
+        <li>
+          <%= c.title %>(作者:<%= c.author %>)
+          <%= link_to "編集",edit_comic_path(c) %>
+           | <%= link_to "削除", c, method: :delete, data: {confirm: "削除してもいいですか?"} %>
+        </li>
     <% end %>
-  </ul>  
+  </ul>
 </h2>
 </div>
