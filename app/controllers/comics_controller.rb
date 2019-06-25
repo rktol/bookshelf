@@ -1,5 +1,5 @@
 class ComicsController < ApplicationController
-  
+
   before_action :login_required
 
   def new
@@ -15,7 +15,7 @@ class ComicsController < ApplicationController
  private
 
  def comic_params
-   params.require(:comic).permit(:title)
+   params.require(:comic).permit(:title, :author)
  end
 
  def user_params

@@ -1,2 +1,4 @@
 <h1>読んだ漫画　　</h1>
-<%=@randomcomic.title%>
+<% @comics.each do |c| %>
+        <%= c.title %>(作者:<%= c.author %>)<br>
+    <% end %>

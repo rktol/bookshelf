@@ -11,10 +11,13 @@
 
   <body>
     <% if logged_in? %>
-     <%= link_to "Log out", logout_path, method: :delete %>
+     <%= link_to "Log out", logout_path, method: :delete %><br>
+     <%= link_to "add comic", comics_new_path %>
+
    <% else %>
      <%= link_to "Log in", login_path %>
    <% end %>
+
 
 
     <% flash.each do |message_type, message| %>
