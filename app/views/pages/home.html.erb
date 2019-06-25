@@ -12,7 +12,7 @@
   <% if logged_in? %>
   <%= link_to "Bookshelfを始める！",userreads_path, class:"btn btn-lg btn-primary" %>
  <% else %>
-<%= link_to "Bookshelfを始める！",'#', class:"btn btn-lg btn-primary" %>
+<%= link_to "Bookshelfを始める！","users/new", class:"btn btn-lg btn-primary" %>
  <% end %>
 
 

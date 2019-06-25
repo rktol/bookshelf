@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   root 'pages#home'
   resources :userreads
   get 'sessions/new'
@@ -9,5 +10,6 @@ Rails.application.routes.draw do
   get'/login',to: 'sessions#new'
   delete '/logout', to:'sessions#destroy'
   post'sessions/create'
+  resources :users
 
 end
