@@ -1,4 +1,11 @@
-<h1>読んだ漫画　　</h1>
+<%= provide(:title, "読んだ漫画") %>
+<div class="center jumbotron">
+<h1>登録漫画一覧</h1>
+<h2>
+  <ul>
 <% @comics.each do |c| %>
-        <%= c.title %>(作者:<%= c.author %>)<br>
+        <li><%= c.title %>(作者:<%= c.author %>)</li>
     <% end %>
+  </ul>  
+</h2>
+</div>

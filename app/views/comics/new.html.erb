@@ -1,3 +1,7 @@
+<%= provide(:title, "登録") %>
+
+<h1> 漫画の追加</h1>
+<h2>
 <%= form_with model: Comic.new, url: {action: :create}, local: true do |f| %>
 <div>
  <%= f.label :title %>
@@ -11,3 +15,5 @@
 
  <%= f.submit %>
 <% end %>
+
+</h2>
