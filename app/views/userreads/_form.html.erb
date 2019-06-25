@@ -12,21 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :comic_id %>
-    <%= form.text_field :comic_id %>
+    <%= form.label :comic_id, "漫画"%>
+    <%= form.select :comic_id,@comics.map{|c| [c.title,c.id]} %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :user_id, "ユーザ" %>
+    <%= form.select :user_id,@users.map{|u| [u.name,u.id]} %>
   </div>
 
   <div class="field">
-    <%= form.label :vol %>
+    <%= form.label :vol, "巻数" %>
     <%= form.text_field :vol %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "本棚にしまう" %>
   </div>
 <% end %>

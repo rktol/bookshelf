@@ -15,8 +15,8 @@
   <tbody>
     <% @userreads.each do |userread| %>
       <tr>
-        <td><%= userread.comic_id %></td>
-        <td><%= userread.user_id %></td>
+        <td><%= @comics[userread.comic_id-1].title %></td>
+        <td><%= @users[userread.user_id-1].name %></td>
         <td><%= userread.vol %></td>
         <td><%= link_to 'Show', userread %></td>
         <td><%= link_to 'Edit', edit_userread_path(userread) %></td>
@@ -28,17 +28,4 @@
 
 <br>
 
-<%= link_to 'New Userread', new_userread_path %>
-
-
-<br>
-
-<% @comics.each do |c| %>
-        <%= c.id %>:<%= c.title %>(作者:<%= c.author %>)<br>
-<% end %>
-
-<br>
-
-<% @users.each do |u| %>
-        <%= u.id %>:<%= u.name %><br>
-<% end %>
+<%= link_to '本棚へ新しい本を登録する', new_userread_path %>
